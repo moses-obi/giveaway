@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home.css">
+        <title>about us</title>
+        <style>
+            header{
+                top: 0;
+            }
+            body{
+            background-color: black;
+        }
+        .contact{
+            margin-top: 8rem;
+            margin-bottom: 5rem;
+        }
+        .contact-cont{
+            margin-left: 2rem;
+            width: 80%;
+            height: 50%;
+            margin-bottom: 1rem;
+        }
+        .report{
+            background-color: bisque;
+            padding: 2rem; 
+        }
+        .report h3{
+            color: white;
+            font-size: 1.4rem;
+            font-family: sans-serif;
+            margin-bottom: 1rem;
+        }
+        .form-row{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .form-row input{
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid black;
+            padding: 3px;
+            outline: none;
+            width: 12rem;
+        }
+        .reach-us {
+            background-color: darkolivegreen;
+            padding: 1.5rem;
+            color: white;
+            font-family: sans-serif;
+        }
+        .reach-us h3{
+            color: white;
+            font-size: 1.4rem;
+            font-family: sans-serif;
+            margin-bottom: 1rem;
+        }
+        .reach-us div{
+            line-height: 2rem;
+            display: flex;
+            gap: 2rem;
+        }
+        label {
+            display: block;
+            color: darkolivegreen;
+            margin-top: 5px;
+            font-family: sans-serif;
+        }
+        .text-area{
+            margin-top: 1.5rem;
+            color: darkolivegreen;
+        }
+        .text-area div{
+            font-weight: bold;
+            font-family: sans-serif;
+            text-transform: uppercase;
+        }
+        button{
+            display: block;
+            background-color: darkolivegreen;
+            padding: 3px;
+            border-radius: 3px;
+            color: white;
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+        @media screen and (min-width:780px){
+            body{
+                align-items: center;
+            }
+            .menu{
+                display: none;
+            }
+            .link-container {
+                display: flex;
+            }
+        .contact-cont{
+            margin-left: 3rem;
+            width: 100%;
+            height: 70%;
+            display: flex;
+            position: absolute;
+            top: 7rem;
+            left: -3rem;
+        }
+        .form-row{
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+        }
+        }
+        </style>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="logo">
+                <h1>LOGO</h1>
+            </div>
+            <div class="nav">
+                <button class="menu"><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true" role="img"
+                        width="1em" height="1em"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 24 24">
+                        <g fill="none">
+                            <path
+                                d="M2 6a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1z"
+                                fill="white" />
+                            <path
+                                d="M2 12.032a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1z"
+                                fill="white" />
+                            <path
+                                d="M3 17.064a1 1 0 1 0 0 2h18a1 1 0 0 0 0-2H3z"
+                                fill="white" />
+                        </g>
+                    </svg></button>
+        
+                <div class="link-container">
+                    <button class="cancel">X</button>
+                    <ul class="ul">
+                        <li><a href="home.html">home</a>
+                        </li>
+                        <li><a href="about.html">about</a>
+                        </li>
+                        <li><a
+                                href="contact.html">contact</a>
+                        </li>
+                        <li><a href="spin.html">blog</a>
+                        </li>
+                        <li>
+                            <button id="category">Category
+                                <span id="arr-dwn"
+                                    style="top: 2px; position: absolute;"><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        aria-hidden="true"
+                                        role="img"
+                                        style="vertical-align: -0.125em;"
+                                        width="1em"
+                                        height="1em"
+                                        preserveAspectRatio="xMidYMid meet"
+                                        viewBox="0 0 20 20">
+                                        <path fill="white"
+                                            d="m5 6l5 5l5-5l2 1l-7 7l-7-7z" />
+                                    </svg></span>
+                                <div class="category">
+                                    <a href="#"
+                                        class="cat">Gadgets</a>
+                                    <a href="#"
+                                        class="cat">Vacations</a>
+                                    <a href="#"
+                                        class="cat">Home
+                                        appliances</a>
+                                    <a href="#"
+                                        class="cat">Articles</a>
+                                    <a href="#"
+                                        class="cat">kitchen
+                                        utensils</a>
+                                    <a href="#"
+                                        class="cat">school
+                                        stuff</a>
+                                    <a href="#"
+                                        class="cat">gift
+                                        cards</a>
+                                    <a href="#"
+                                        class="cat">concerts</a>
+                                    <a href="#">see
+                                        all
+                                        category</a>
+                                </div>
+                            </button>
+        
+                        </li>
+                    </ul>
+                </div>
+        </header>
+        
+        <div class="contact">
+        <div class="contact-cont">
+            <div class="report">
+                <h3>send your request</h3>
+                <form>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="name" aria-placeholder="name">Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-group">
+                            <label for="pnone" aria-placeholder="phone number">phone</label>
+                            <input type="number">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="email"
+                                aria-placeholder="Email">Email</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-group">
+                            <label for="refrence"
+                                aria-placeholder="phone number">refrence</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                </form>
+                <div class="text-area">
+                    <div>message</div>
+                    <textarea cols="30" rows="5"></textarea>
+                </div>
+                <button>send</button>
+            </div>
+            <div class="reach-us">
+                <h3>reach us</h3>
+                <div class="r-email">
+                    <span>Email</span>
+                    <span>chimaobimdike.gmail.com</span>
+                </div>
+                <div class="r-phone">
+                    <span>phone</span>
+                    <span>+123 434 4564</span>
+                </div>
+                <div class="r-social">
+                    <span>facebook</span>
+                    <span>chimaobimdike</span>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="home.js"></script>
+</html>

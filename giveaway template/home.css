@@ -1,0 +1,419 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: rgb(255, 245, 233);
+    --header: rgb(238, 234, 172);
+    --menu-bg: rgb(85, 107, 47);
+    --newsletter-bg: rgb(238, 251, 255);
+}
+
+.general-container {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    padding: 8px;
+}
+
+.header {
+    position: fixed;
+    margin-top: -.45rem;
+    margin-left: -.4rem;
+    width: 100%; 
+    transition: .5s; 
+    z-index: 100;
+}
+
+.logo {
+    background-color: var(--header);
+    min-height: 4rem;
+    text-align: center;
+}
+
+.nav {
+    background-color: darkolivegreen;
+}
+
+button {
+    background: transparent;
+    border: none;
+    font-size: 26px;
+    outline: none;
+}
+
+.cancel {
+    color: white;
+    position: absolute;
+    right: .5rem;
+    top: 0px;
+}
+
+.link-container {
+    min-height: 100vh;
+    position: absolute;
+    left: .3rem;
+    top: 4rem;
+    background-color: rgba(0, 0, 0, .85);
+    backdrop-filter: blur(2rem);
+    width: 96%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7rem;
+    border-radius: .7rem;
+    transition: .5s;
+}
+
+.link-container.active {
+    display: flex;
+}
+
+.link-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: absolute;
+    transition: .5s;
+}
+
+.link-container ul.active {
+    top: 0;
+}
+
+
+.link-container ul li {
+    list-style-type: none;
+}
+
+.link-container ul li a {
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: mistyrose;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.link-container ul li a:active {
+     color: red;
+}
+
+.link-container ul li #category {
+    color: bisque;
+    font-size: .8rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.link-container ul li .category{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    background-color: black;
+    padding: 1rem;
+    border-radius: .3rem;
+    margin-top: .5rem;
+    display: none;
+}
+
+.link-container ul li .category.active{
+    display: flex;
+}
+
+.link-container ul li .category a {
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: burlywood;  
+}
+
+/* styling the main section */
+main {
+    margin-top: 6.5rem;
+    border: .1rem solid rgb(248, 211, 143);
+    padding: 1rem;
+}
+
+.img-card {
+    min-height: 15rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.img-card img {
+    height: 100%;
+    width: 100%;
+}
+
+.img-card .text {
+    color: rgb(10, 26, 26);
+    display: inline;
+}
+h2{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    background-color: var(--menu-bg);
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: 2px;
+    color: white;
+    box-shadow: 5px 5px 5px grey;
+}
+article{
+    border: .5px solid lightgrey;
+    padding: 1rem;
+    height: 20rem;
+    overflow: auto;
+    width:80%;
+}
+article h3{
+    background-color: var(--header);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin-bottom: 1rem;
+}
+
+/* styling the news letter */
+.newsletter {
+    border: .1rem solid gray;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--newsletter-bg);
+}
+
+.newsletter h3 {
+    font-family: sans-serif;
+    background-color: var(--header);
+    padding-left: 1rem;
+    border-bottom: .1rem solid gray;
+}
+
+.newsletter div {
+    font-family: sans-serif;
+    font-size: .8rem;
+    margin-top: .7rem;
+    padding-left: 1rem;
+}
+.newsletter input {
+    height: 2.5rem;
+    width: 15rem;
+    outline: none;
+    background-image: linear-gradient(rgb(255, 255, 255),rgb(187, 182, 182));
+    border: none;
+    margin-top: 1rem;
+    margin-bottom: .6rem;
+    margin-left: 1rem;
+    padding: .4rem;
+    border-radius: .3rem;
+}
+
+.newsletter button {
+    background-color: var(--menu-bg);
+    padding: .4rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    border-radius: .3rem;
+}
+
+.newsletter button:hover {
+    background-color: rgb(57, 73, 30);
+    cursor: pointer;
+}
+
+.newsletter button:active {
+    transform: scale(.95);
+}
+
+footer {
+    background-image: url(images/fashion.jpg);
+    background-size: 100% auto;
+    min-height: 20rem;
+    width: 100%;
+    z-index: 0;
+}
+
+.footer-bg-layout {
+    background-color: rgba(16, 24, 1, 0.98);
+    min-height: 20rem;
+    width: 100%;
+    color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+.footer-bg-layout .icons {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
+.footer-bg-layout .icons a svg {
+    font-size: 2rem;
+}
+
+.collaboration i {
+    display: block;
+    margin-top: .5rem;
+}
+.collaboration div a,.follow .icons + a,.follow .icons+a+a{
+    color: whitesmoke;
+    margin-top: .3rem;
+}
+
+.collaboration div a:hover {
+    color: orangered;
+}
+
+@media screen and (min-width:780px){
+    body {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    button {
+        display: none;
+    }
+    .join-newsletter{
+        display: inline-block;
+    }
+    .link-container {
+        display: flex;
+        background-color: transparent;
+        backdrop-filter: blur(0);
+        top: -31.5rem;
+        width: 100%;
+    }
+    .link-container ul{
+        flex-direction: row;
+        gap: 3rem;
+        bottom: 0rem;
+    }
+    .link-container ul.active {
+    bottom: 0;
+    }
+    .link-container ul li a{
+        color: var(--menu-bg);
+        font-size: 1.1rem;
+        text-align: center;
+        animation: animate 5s infinite alternate-reverse;
+    }
+    .link-container ul li #category {
+    color: bisque;
+    font-size: 1rem;
+    text-transform: uppercase;
+    display: block;
+    position: absolute;
+    animation: animate 5s infinite alternate-reverse;
+    cursor: pointer;
+    }
+    .link-container ul li #category .category{
+    flex-direction: column;
+    gap: 1.3rem;
+    background-color: black;
+    padding: 1rem;
+    border-radius: .3rem;
+    margin-top: 50rem;
+    display: none;
+    position: absolute;
+    bottom: -24rem;
+}
+    .link-container ul li #category:hover .category{
+        display: flex;
+        margin-top: 50rem;
+    }
+    .link-container ul li a:hover {
+        color: orange;
+    }
+    @keyframes animate {
+        0% {
+            color: currentColor;
+        }25%{
+            color: chartreuse;
+        }50%{
+            color: blueviolet;
+        }75%{
+            color: aqua;
+        }100%{
+            color: red;
+        }
+    }
+    .flex {
+        display: flex;
+    }
+    main {
+    padding: 1.5rem;
+    width: 65%;
+   }
+   aside{
+       border: .5px solid rgb(250, 203, 117);
+       width: 30%;
+       margin-left: 2rem;
+       padding: .5rem;
+       margin-top: 6.5rem;
+   }
+
+   .img-card {
+    min-height: 15rem;
+    width: 40%;
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+    display: inline-block;
+    margin-left: 2rem;
+    margin-bottom: -2rem;
+  }
+
+  .img-card img {
+    height: 100%;
+    width: 100%;
+}
+article{
+    border: .5px solid lightgrey;
+    padding: 2px;
+    height: 20rem;
+    overflow: hidden;
+}
+.see {
+    cursor: pointer;
+    position: absolute;
+    bottom: 8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: transparent;
+    width: 26.5%;
+    height: 2rem;
+    text-align: center;
+    margin-bottom: -.9rem;
+    backdrop-filter: blur(3px);
+    color: white;
+    animation: animate 10s infinite;
+}
+
+.newsletter{
+    min-height: 10rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+.newsletter input{
+    width: 90%;
+}
+.newsletter button{
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+    padding: 5px;
+}  
+}
